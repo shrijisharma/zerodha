@@ -17,9 +17,14 @@ const cookieParser = require("cookie-parser");
 
 // app.use(cors());
 app.use(cors({
-  origin: ["http://localhost:3000", "http://localhost:3001"],
+  origin: [
+    "http://localhost:3000",
+    "http://localhost:3001",
+    "https://main.d3ico3zruf0fwv.amplifyapp.com",
+    "https://main.d1q0br93zs3fw6.amplifyapp.com"
+  ],
   credentials: true,
-  methods: ["GET","POST","PUT","DELETE","OPTIONS"],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
 }));
 app.use(bodyParser.json());

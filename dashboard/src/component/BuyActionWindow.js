@@ -1,18 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+
 import axios from "axios";
 
 import GeneralContext from "./GeneralContext";
 
 import "./BuyActionWindow.css";
+const API_URL = process.env.REACT_APP_API_URL;
 
 const BuyActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleBuyClick = () => {
-    axios.post("http://localhost:3002/newOrder", {
+    axios.post(`http://${API_URL}/newOrder`, {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,

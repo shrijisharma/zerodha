@@ -48,11 +48,12 @@ function Hero() {
   const [phone, setPhone] = useState("");
   const [otp, setOtp] = useState("");
   const [step, setStep] = useState("phone");
+  const API_URL = process.env.REACT_APP_API_URL;
 
   // ✅ OTP bhejne ka function
   const sendOtp = async () => {
     try {
-      const res = await fetch("http://localhost:3002/auth/send-otp", {
+      const res = await fetch(`http://{API_URL}/auth/send-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ phone }),
@@ -73,7 +74,7 @@ function Hero() {
   // ✅ OTP verify karne ka function
   const verifyOtp = async () => {
     try {
-      const res = await fetch("http://localhost:3002/auth/verify-otp", {
+      const res = await fetch(`http://${API_URL}/auth/verify-otp`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include", // cookie ke liye important
@@ -82,7 +83,7 @@ function Hero() {
       const data = await res.json();
       if (data.success) {
         alert("OTP Verified!");
-        window.location.href = "http://localhost:3001"; // ✅ dashboard pe redirect
+        window.location.href = `http://${API_URL}`; // ✅ dashboard pe redirect
       } else {
         alert(data.error);
       }
