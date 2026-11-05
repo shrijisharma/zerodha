@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.nav-link{
+  margin-left: 40px;
+}
+
+#supportHero{
+  background-color: rgb(56, 126, 209);
+  color: white;
+}
+#supportWrapper{
+    display:flex;
+    justify-content: space-between;
+    margin:0 150px;
+}
+#supportHero a{
+    color:white
+}
+#supportHero input{
+padding:15px 50px;
+width:100%;
+font-size:20px;
+border-radius:10px;
+border:none;
+}
+#signupHerobutton{
+padding:15px 50px;
+width:50%;
+font-size:20px;
+border-radius:10px;
+border:none;
+ background-color:rgb(56, 126, 209);
+  color: white;
+}
+#signupHeroinput{
+padding:15px 50px;
+width:100%;
+font-size:20px;
+
+
+}
+.number-circle {
+  width: 35px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #6c757d;  /* gray border */
+  color: #6c757d;             /* gray text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;            /* text size */
+}
+
